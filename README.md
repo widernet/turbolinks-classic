@@ -102,6 +102,11 @@ To enable the progress bar, include the following in your JavaScript:
 Turbolinks.enableProgressBar();
 ```
 
+By default the progress bar will only be displayed for requests that take more than 400ms. This duration can be customized with the `delay` property:
+```javascript
+Turbolinks.enableProgressBar({ delay: 1000 });
+```
+
 The progress bar is implemented on the `<html>` element's pseudo `:before` element and can be **customized** by including CSS with higher specificity than the included styles. For example:
 
 ```css
